@@ -1,0 +1,19 @@
+.project-container {
+  width: 400px;
+  margin: auto;
+}
+.project-box {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.project-box:hover {
+  background-color: rgba(101, 160, 224, 0.468);
+}
+.project-names {
+  text-decoration: none;
+  color: black;
+}

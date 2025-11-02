@@ -1,0 +1,27 @@
+.input-container {
+  width: 400px;
+  margin: auto;
+}
+.input-box {
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+}
+.chips-container {
+  padding: 10px;
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.chips-data {
+  padding: 10px;
+}
+.chips-text {
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.481);
+  border-radius: 15px;
+}
+.delete {
+  cursor: pointer;
+}

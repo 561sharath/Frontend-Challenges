@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+.search-container {
+  max-height: 300px;
+  width: 400px;
+  border: 1px solid black;
+  margin: auto;
+  overflow-y: scroll;
+}
+.input-container {
+  width: 400px;
+  margin: auto;
+}
+.input-search {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+}
+.search-item {
+  padding: 15px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+.search-item:hover {
+  background-color: rgba(116, 116, 111, 0.145);
+}
+.highlight {
+  background-color: rgba(116, 116, 111, 0.145) !important;
+}

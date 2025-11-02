@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+.input-container {
+  width: 400px;
+  margin: auto;
+}
+.input-box {
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+}
+.tasks-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.todo-container {
+  border: 2px solid black;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  overflow-y: scroll;
+}
+.options-container {
+  border: 2px solid black;
+  text-align: center;
+  width: 100px;
+}
+.complte-tasks-container {
+  border: 2px solid black;
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  overflow-y: scroll;
+}
+.todo-data {
+  text-align: left;
+  padding: 5px;
+  font-size: 16px;
+}
+.options-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+  padding: 10px;
+}
+
+.option-button {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cancel-effect {
+  display: none; /* hidden by default */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.todo-item:hover .cancel-effect {
+  display: inline; /* show on hover */
+}
+
+.edit-effect {
+  display: none; /* hidden by default */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.todo-item:hover .edit-effect {
+  display: inline; /* show on hover */
+}
+

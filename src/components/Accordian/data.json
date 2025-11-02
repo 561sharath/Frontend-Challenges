@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "title": "First Lesson",
+      "subject": "Having some test"
+    },
+    {
+      "title": "Second Lesson",
+      "subject": "Introduction to JavaScript"
+    },
+    {
+      "title": "Third Lesson",
+      "subject": "Understanding HTML & CSS"
+    },
+    {
+      "title": "Fourth Lesson",
+      "subject": "Basics of Data Structures"
+    },
+    {
+      "title": "Fifth Lesson",
+      "subject": "Introduction to Git & GitHub"
+    }
+  ]
+}
