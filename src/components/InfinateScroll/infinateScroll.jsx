@@ -10,7 +10,7 @@ export default function InfinateScroll() {
   const fetchProducts = async () => {
     setLoading(true);
     const res = await fetch(
-      `https://dummyjson.com/products?limit=10&skip=${(currentPage - 1) * 10}`
+      `https://dummyjson.com/products?limit=20&skip=${(currentPage - 1) * 10}`
     );
     const data = await res.json();
     setProductList((prev) => [...prev, ...data.products]);
@@ -33,7 +33,6 @@ export default function InfinateScroll() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [loading]);
 
-
   return (
     <div>
       <div className="App">
@@ -54,7 +53,7 @@ export default function InfinateScroll() {
         ))}
       </div>
       {loading && (
-        <div className="App loading-text">
+        <div className="App loading-text" style={{ textAlign: "center" }}>
           Loading More Products, Please Wait......
         </div>
       )}
