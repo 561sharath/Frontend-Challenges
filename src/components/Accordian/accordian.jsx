@@ -11,17 +11,9 @@ export default function Accordian() {
   const activeAccordian = (index) => {
     setActiveState((prev) => (index === prev ? null : index));
   };
-  const navigate = useNavigate();
-
-  const goToHome = () => {
-    navigate("/");
-  };
-
+ 
   return (
     <>
-      <div className="back" onClick={goToHome}>
-        🔙Back
-      </div>
       <div className="App">
         <h1>Accordian</h1>
 

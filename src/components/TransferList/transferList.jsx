@@ -134,16 +134,9 @@ export default function TransferList() {
     setEditingTaskItem(null);
   };
 
-  const navigate = useNavigate();
-
-  const goToHome = () => {
-    navigate("/");
-  };
+  
   return (
     <div>
-      <div className="back" onClick={goToHome}>
-        🔙Back
-      </div>
       <h1 className="App">Transfer List</h1>
       <div className="input-container">
         <input

@@ -21,19 +21,9 @@ export default function Chips() {
     setChipsData(newChipsData);
   };
 
-  const navigate = useNavigate();
-
-  const goToHome = () => {
-    navigate("/");
-  };
-
-  // console.log(chipsData, "chips");
 
   return (
     <>
-      <div className="back" onClick={goToHome}>
-        🔙Back
-      </div>
       <div className="App">
         <h1>Input Chips</h1>
 

@@ -1,36 +1,22 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import "./projects.css";
+import { Outlet, useNavigate } from "react-router-dom";
 
-export default function Projects() {
-  const [projectsData, setProjectsData] = useState([
-    "Accordian",
-    "ChessBoard",
-    "Input Chips",
-    "Pagination",
-    "Infinate Scroll",
-    "Auto Complete Search",
-    "Transfer List",
-    "Progress Bar",
-    "Stop Watch"
-  ]);
-
+const Projects = () => {
+  const navigate = useNavigate();
+  const homePage = () => {
+    navigate("/");
+  };
   return (
-    <div className="App">
-      <h1>Practice Projects</h1>
-
-      <div className="project-container">
-        {projectsData.map((project, index) => (
-          <Link
-            to={`/${project.toLowerCase().replace(/\s/g, "-")}`}
-            style={{ textDecoration: "none" }}
-          >
-            <div className="project-box" key={index}>
-              <span className="project-names">{project}</span>
-            </div>
-          </Link>
-        ))}
+    <>
+      <div className="home-page">
+        <button className="home-button" onClick={homePage}>
+          Home
+        </button>
+        <h1 className="fe-header">Frontend Challenges</h1>
       </div>
-    </div>
+      <Outlet />
+    </>
   );
-}
+};
+export default Projects;

@@ -29,12 +29,6 @@ export default function AutoCompleteSearch() {
     return () => clearTimeout(delayDebounce);
   }, [textData]);
 
-  const navigate = useNavigate();
-
-  const goToHome = () => {
-    navigate("/");
-  };
-
   const handleKeyDown = (e) => {
     if (e.key === "ArrowDown") {
       setHighLightedText((prev) =>
@@ -52,9 +46,6 @@ export default function AutoCompleteSearch() {
   };
   return (
     <div>
-      <div className="back" onClick={goToHome}>
-        🔙Back
-      </div>
       <h1 className="App">Auto Complete Search</h1>
       <div className="input-container">
         <input

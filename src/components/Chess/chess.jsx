@@ -18,19 +18,11 @@ export default function Chess() {
     setSelect(newSelected);
   };
 
-  const navigate = useNavigate();
-
-  const goToHome = () => {
-    navigate("/");
-  };
   return (
     <>
-      <div className="back" onClick={goToHome}>
-        🔙Back
-      </div>
       <div className="App">
         <h1>Chess Board</h1>
-        <p>Click on any of the box.....</p>
+        <p style={{textAlign: "center"}}>Click on any of the box.....</p>
         <div className="chess-board">
           {[...Array(8)].map((item, row) =>
             [...Array(8)].map((item, col) => {

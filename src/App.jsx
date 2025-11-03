@@ -11,6 +11,7 @@ import TransferList from "./components/TransferList/transferList";
 import ProgressBar from "./components/ProgressBar/progressBar";
 import "./index.css";
 import StopWatch from "./components/StopWatch/stopWatch";
+import HomePage from "./components/HomePage/homePage";
 
 export default function App() {
   // return <Accordian />;
@@ -22,16 +23,18 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" Component={Projects} />
-        <Route path="/accordian" Component={Accordian} />
-        <Route path="/chessboard" Component={Chess} />
-        <Route path="/input-chips" Component={Chips} />
-        <Route path="/pagination" Component={Pagination} />
-        <Route path="/infinate-scroll" Component={InfinateScroll} />
-        <Route path="/auto-complete-search" Component={AutoCompleteSearch} />
-        <Route path="/transfer-list" Component={TransferList} />
-        <Route path="/progress-bar" Component={ProgressBar} />
-        <Route path="/stop-watch" Component={StopWatch} />
+        <Route path="/" Component={Projects}>
+          <Route index Component={HomePage} />
+          <Route path="/accordian" Component={Accordian} />
+          <Route path="/chessboard" Component={Chess} />
+          <Route path="/input-chips" Component={Chips} />
+          <Route path="/pagination" Component={Pagination} />
+          <Route path="/infinate-scroll" Component={InfinateScroll} />
+          <Route path="/auto-complete-search" Component={AutoCompleteSearch} />
+          <Route path="/transfer-list" Component={TransferList} />
+          <Route path="/progress-bar" Component={ProgressBar} />
+          <Route path="/stop-watch" Component={StopWatch} />
+        </Route>
       </Routes>
     </Router>
   );

@@ -28,18 +28,10 @@ export default function ProgressBar() {
 
   let totalProgress = totalCount > 0 ? totalCheckedData / totalCount : 0;
 
-  const navigate = useNavigate();
-
-  const goToHome = () => {
-    navigate("/");
-  };
   return (
-    <div>
-      <div className="fixed-container">
-        <div className="back" onClick={goToHome}>
-          🔙Back
-        </div>
-        <h1 className="App">Progress Bar</h1>
+    <>
+      <div className="App">
+        <h1>Progress Bar</h1>
 
         <div className="progress-bar-container">
           <div
@@ -59,10 +51,10 @@ export default function ProgressBar() {
         </div>
       </div>
 
-      <div className="App">
+      <div>
         {progressData.length > 0 && (
           <div>
-            <h3 className="App">Pending Tasks</h3>
+            <h3 style={{textAlign: "center", fontSize: "1.5rem"}}>Pending Tasks</h3>
             <div className="data-container">
               {progressData.map((item, index) => (
                 <div key={index} className="progress-data">
@@ -81,6 +73,6 @@ export default function ProgressBar() {
           </div>
         )}
       </div>
-    </div>
+    </>
   );
 }

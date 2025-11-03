@@ -33,17 +33,9 @@ export default function InfinateScroll() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [loading]);
 
-  const navigate = useNavigate();
-
-  const goToHome = () => {
-    navigate("/");
-  };
 
   return (
     <div>
-      <div className="back" onClick={goToHome}>
-        🔙Back
-      </div>
       <div className="App">
         <h1>Infinate Scroll</h1>
       </div>

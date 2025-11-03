@@ -35,17 +35,9 @@ export default function Pagination() {
   const noOfPages = Math.ceil(totalPages / productsPerPage);
   const startPage = (currentPage - 1) * productsPerPage;
   const endPage = startPage + productsPerPage;
-  const navigate = useNavigate();
-
-  const goToHome = () => {
-    navigate("/");
-  };
-
+  
   return (
     <div>
-      <div className="back" onClick={goToHome}>
-        🔙Back
-      </div>
       <div className="App">
         <h1>Pagination</h1>
       </div>

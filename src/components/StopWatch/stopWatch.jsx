@@ -41,7 +41,7 @@ const StopWatch = () => {
   }, []);
 
   return (
-    <div>
+    <div className="App">
       <h1>Stop Watch Component</h1>
       <p>{timer}</p>
       <button onClick={() => setStopWatch((prev) => [...prev, timer])}>
