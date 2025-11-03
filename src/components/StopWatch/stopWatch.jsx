@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const StopWatch = () => {
   const [timer, setTimer] = useState(0);
-  const [stopWatch, setStopWatch] = useState([]);
+  const [isRunning, setIsRunning] = useState(false);
+  const [records, setRecords] = useState([]);
+  const intervalRef = useRef(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-
-      //   // Format date as DD MMM YYYY
+   //   // Format date as DD MMM YYYY
       // const datePart = now.toLocaleDateString('en-GB', {
       //   day: '2-digit',
       //   month: 'short',
@@ -28,32 +26,66 @@ const StopWatch = () => {
       // const year = String(now.getFullYear()).padStart(4, "0");   //
 
       // Format time as HH:MM:SS
-      const hours = String(now.getHours()).padStart(2, "0");
-      const minutes = String(now.getMinutes()).padStart(2, "0");
-      const seconds = String(now.getSeconds()).padStart(2, "0");
-      const milliseconds = String(now.getMilliseconds()).padStart(3, "0");
+    //   const hours = String(now.getHours()).padStart(2, "0");
+    //   const minutes = String(now.getMinutes()).padStart(2, "0");
+    //   const seconds = String(now.getSeconds()).padStart(2, "0");
+    //   const milliseconds = String(now.getMilliseconds()).padStart(2, "0");
 
-      const timePart = `${hours}:${minutes}:${seconds}.${milliseconds}`;
-      setTimer(timePart);
-    }, 1);
+    //   const timePart = `${hours}:${minutes}:${seconds}.${milliseconds}`;
 
-    return () => clearInterval(interval);
-  }, []);
+  useEffect(() => {
+    if (isRunning) {
+      const startTime = Date.now() - timer; // resume from paused time
+
+      intervalRef.current = setInterval(() => {
+        setTimer(Date.now() - startTime);
+      }, 10); // update every 10ms for smoother performance
+    } else {
+      clearInterval(intervalRef.current);
+    }
+
+    return () => clearInterval(intervalRef.current);
+  }, [isRunning]);
+
+  // Helper function to format milliseconds into hh:mm:ss.ms
+  const formatTime = (time) => {
+    const hours = String(Math.floor(time / 3600000)).padStart(2, "0");
+    const minutes = String(Math.floor((time % 3600000) / 60000)).padStart(2, "0");
+    const seconds = String(Math.floor((time % 60000) / 1000)).padStart(2, "0");
+    const milliseconds = String(Math.floor((time % 1000) / 10)).padStart(2, "0");
+    return `${hours}:${minutes}:${seconds}.${milliseconds}`;
+  };
+
+  const handleStartStop = () => setIsRunning((prev) => !prev);
+  const handleReset = () => {
+    clearInterval(intervalRef.current);
+    setIsRunning(false);
+    setTimer(0);
+    setRecords([]);
+  };
+  const handleRecord = () => setRecords((prev) => [...prev, formatTime(timer)]);
 
   return (
     <div className="App">
-      <h1>Stop Watch Component</h1>
-      <p>{timer}</p>
-      <button onClick={() => setStopWatch((prev) => [...prev, timer])}>
-        Record Time
-      </button>
-      <div>
-        <h2>Recorded Time</h2>
-        {stopWatch.map((time, index) => (
-          <div key={index}>{time}</div>
-        ))}
+      <h1>⏱ Stop Watch</h1>
+      <h2>{formatTime(timer)}</h2>
+
+      <div style={{ margin: "10px" }}>
+        <button onClick={handleStartStop}>
+          {isRunning ? "Pause" : "Start"}
+        </button>
+        <button onClick={handleRecord} disabled={!isRunning}>
+          Record
+        </button>
+        <button onClick={handleReset}>Reset</button>
       </div>
+
+      <h3>🏁 Recorded Times</h3>
+      {records.map((r, i) => (
+        <div key={i}>{r}</div>
+      ))}
     </div>
   );
 };
+
 export default StopWatch;

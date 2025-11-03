@@ -10,7 +10,7 @@ export default function InfinateScroll() {
   const fetchProducts = async () => {
     setLoading(true);
     const res = await fetch(
-      `https://dummyjson.com/products?limit=20&skip=${(currentPage - 1) * 10}`
+      `https://dummyjson.com/products?limit=30&skip=${(currentPage - 1) * 10}`
     );
     const data = await res.json();
     setProductList((prev) => [...prev, ...data.products]);
