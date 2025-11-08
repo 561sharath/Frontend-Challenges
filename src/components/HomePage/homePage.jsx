@@ -56,6 +56,12 @@ const HomePage = () => {
       image: "https://miro.medium.com/1*cpD3T-0TChZXMlfpRFBBAQ.gif",
       url: "/stop-watch",
     },
+    {
+      name: "OTP Generator",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqVOYaciHAixlm_Kp9lvbP-BWw_0s3UKyOWSOw_YnuIxDd5GJS8gRvEAEshbUROD3ypHE&usqp=CAU",
+      url: "/otp-generator",
+    }
   ]);
 
   return (

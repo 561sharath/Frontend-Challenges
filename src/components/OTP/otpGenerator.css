@@ -1,0 +1,66 @@
+.otp-input-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp-title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: larger;
+    font-weight: 800;
+}
+.generated-otp-display{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.otp-input-box > input{
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.generate-otp-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.otp-input-box:focus{
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.otp-validation-result{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: green;
+}
+
+.otp-validation-result-failure{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: red;
+}

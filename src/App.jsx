@@ -12,6 +12,7 @@ import ProgressBar from "./components/ProgressBar/progressBar";
 import "./index.css";
 import StopWatch from "./components/StopWatch/stopWatch";
 import HomePage from "./components/HomePage/homePage";
+import OTPGenerator from "./components/OTP/otpGenerator";
 
 export default function App() {
   // return <Accordian />;
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/transfer-list" Component={TransferList} />
           <Route path="/progress-bar" Component={ProgressBar} />
           <Route path="/stop-watch" Component={StopWatch} />
+          <Route path="/otp-generator" Component={OTPGenerator} />
         </Route>
       </Routes>
     </Router>
