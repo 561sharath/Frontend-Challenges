@@ -1,0 +1,30 @@
+.stopwatch-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.stopwatch-timer{
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.start-stop-button, .record-button, .reset-button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.recorded-times{
+    font-size: 18px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
