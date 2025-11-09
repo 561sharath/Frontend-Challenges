@@ -61,6 +61,12 @@ const HomePage = () => {
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqVOYaciHAixlm_Kp9lvbP-BWw_0s3UKyOWSOw_YnuIxDd5GJS8gRvEAEshbUROD3ypHE&usqp=CAU",
       url: "/otp-generator",
+    },
+    {
+      name: "Tab Structure",
+      image:
+        "https://cdn.rsjoomla.com/presentation/tabbedform.gif",
+      url: "/tab-structure",
     }
   ]);
 

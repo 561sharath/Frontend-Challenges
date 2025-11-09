@@ -13,6 +13,7 @@ import "./index.css";
 import StopWatch from "./components/StopWatch/stopWatch";
 import HomePage from "./components/HomePage/homePage";
 import OTPGenerator from "./components/OTP/otpGenerator";
+import TabStructure from "./components/Tabs/tabs";
 
 export default function App() {
   // return <Accordian />;
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/progress-bar" Component={ProgressBar} />
           <Route path="/stop-watch" Component={StopWatch} />
           <Route path="/otp-generator" Component={OTPGenerator} />
+          <Route path="/tab-structure" Component={TabStructure} />
         </Route>
       </Routes>
     </Router>

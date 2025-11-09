@@ -1,0 +1,64 @@
+.tabs-container {
+  display: flex;
+}
+.tabs-names {
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.seletedTab-container {
+  min-height: 200px;
+  border: 1px solid black;
+  padding: 10px;
+}
+.active-tab {
+  background-color: rgb(26, 175, 212);
+  font-size: 16px;
+  font-weight: 800;
+}
+.input-divs {
+  display: grid;
+  grid-template-columns: 100px 1fr; /* label width + input flex */
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.input-divs label {
+  font-weight: 500;
+}
+
+.input-divs input {
+  padding: 8px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.profile-header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 10px 0px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0px;
+}
+.buttons {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.file-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 20px 0;
+}
